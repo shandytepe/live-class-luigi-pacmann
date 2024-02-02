@@ -1,0 +1,194 @@
+===== Data Quality Pipeline Start =====
+
+===== Check Data Shape =====
+
+Data Shape for this Data (30000, 31)
+
+===== Check Data Types =====
+
+Column booking_id has data type int64
+Column hotel has data type object
+Column is_canceled has data type int64
+Column lead_time has data type int64
+Column arrival_date_week_number has data type int64
+Column stays_in_weekend_nights has data type int64
+Column stays_in_week_nights has data type int64
+Column adults has data type int64
+Column children has data type float64
+Column babies has data type int64
+Column meal has data type object
+Column country has data type object
+Column market_segment has data type object
+Column distribution_channel has data type object
+Column is_repeated_guest has data type int64
+Column previous_cancellations has data type int64
+Column previous_bookings_not_canceled has data type int64
+Column reserved_room_type has data type object
+Column assigned_room_type has data type object
+Column booking_changes has data type int64
+Column deposit_type has data type object
+Column agent has data type float64
+Column company has data type float64
+Column days_in_waiting_list has data type int64
+Column customer_type has data type object
+Column adr has data type float64
+Column required_car_parking_spaces has data type int64
+Column total_of_special_requests has data type int64
+Column reservation_status has data type object
+Column reservation_status_date has data type object
+Column arrival_date has data type object
+
+===== Check Missing Values =====
+
+Columns booking_id has percentages missing values 0.0 %
+Columns hotel has percentages missing values 7.113333333333333 %
+Columns is_canceled has percentages missing values 0.0 %
+Columns lead_time has percentages missing values 0.0 %
+Columns arrival_date_week_number has percentages missing values 0.0 %
+Columns stays_in_weekend_nights has percentages missing values 0.0 %
+Columns stays_in_week_nights has percentages missing values 0.0 %
+Columns adults has percentages missing values 0.0 %
+Columns children has percentages missing values 0.01 %
+Columns babies has percentages missing values 0.0 %
+Columns meal has percentages missing values 0.0 %
+Columns country has percentages missing values 2.01 %
+Columns market_segment has percentages missing values 3.8733333333333335 %
+Columns distribution_channel has percentages missing values 0.0 %
+Columns is_repeated_guest has percentages missing values 0.0 %
+Columns previous_cancellations has percentages missing values 0.0 %
+Columns previous_bookings_not_canceled has percentages missing values 0.0 %
+Columns reserved_room_type has percentages missing values 0.0 %
+Columns assigned_room_type has percentages missing values 0.0 %
+Columns booking_changes has percentages missing values 0.0 %
+Columns deposit_type has percentages missing values 0.0 %
+Columns agent has percentages missing values 93.19666666666667 %
+Columns company has percentages missing values 94.19666666666667 %
+Columns days_in_waiting_list has percentages missing values 0.0 %
+Columns customer_type has percentages missing values 0.0 %
+Columns adr has percentages missing values 0.0 %
+Columns required_car_parking_spaces has percentages missing values 0.0 %
+Columns total_of_special_requests has percentages missing values 0.0 %
+Columns reservation_status has percentages missing values 0.0 %
+Columns reservation_status_date has percentages missing values 0.0 %
+Columns arrival_date has percentages missing values 0.0 %
+===== Data Quality Pipeline End =====
+
+===== Data Quality Pipeline Start =====
+
+===== Check Data Shape =====
+
+Data Shape for this Data (125, 11)
+
+===== Check Data Types =====
+
+Column title has data type object
+Column link_mal has data type object
+Column release_date has data type object
+Column anime_episode has data type object
+Column anime_duration has data type object
+Column anime_genre has data type object
+Column img_link has data type object
+Column description has data type object
+Column studio has data type object
+Column source has data type object
+Column show_type has data type object
+
+===== Check Missing Values =====
+
+Columns title has percentages missing values 0.0 %
+Columns link_mal has percentages missing values 0.0 %
+Columns release_date has percentages missing values 0.0 %
+Columns anime_episode has percentages missing values 0.0 %
+Columns anime_duration has percentages missing values 0.0 %
+Columns anime_genre has percentages missing values 0.0 %
+Columns img_link has percentages missing values 90.4 %
+Columns description has percentages missing values 0.0 %
+Columns studio has percentages missing values 20.8 %
+Columns source has percentages missing values 1.6 %
+Columns show_type has percentages missing values 0.0 %
+===== Data Quality Pipeline End =====
+
+===== Data Quality Pipeline Start =====
+
+===== Check Data Shape =====
+
+Data Shape for this Data (97, 15)
+
+===== Check Data Types =====
+
+Column manga_id has data type int64
+Column url_manga has data type object
+Column title has data type object
+Column title_english has data type object
+Column title_japanese has data type object
+Column chapters has data type float64
+Column volumes has data type float64
+Column status has data type object
+Column start_published has data type object
+Column end_published has data type object
+Column score has data type float64
+Column rank has data type float64
+Column authors has data type object
+Column genres has data type object
+Column themes has data type object
+
+===== Check Missing Values =====
+
+Columns manga_id has percentages missing values 0.0 %
+Columns url_manga has percentages missing values 0.0 %
+Columns title has percentages missing values 0.0 %
+Columns title_english has percentages missing values 11.34020618556701 %
+Columns title_japanese has percentages missing values 0.0 %
+Columns chapters has percentages missing values 7.216494845360825 %
+Columns volumes has percentages missing values 7.216494845360825 %
+Columns status has percentages missing values 0.0 %
+Columns start_published has percentages missing values 0.0 %
+Columns end_published has percentages missing values 10.309278350515465 %
+Columns score has percentages missing values 3.0927835051546393 %
+Columns rank has percentages missing values 1.0309278350515463 %
+Columns authors has percentages missing values 0.0 %
+Columns genres has percentages missing values 0.0 %
+Columns themes has percentages missing values 0.0 %
+===== Data Quality Pipeline End =====
+
+Start Convert values Column is_canceled
+End of Process
+Start Convert values Column is_repeated_guest
+End of Process
+DEBUG: Checking if ExtractHotelDatabase() is complete
+INFO: Informed scheduler that task   ExtractHotelDatabase__99914b932b   has status   DONE
+DEBUG: Checking if ExtractAnimeData(year=2024, season=winter) is complete
+INFO: Informed scheduler that task   ExtractAnimeData_winter_2024_307ccc7558   has status   DONE
+DEBUG: Checking if ExtractAPIMangaData() is complete
+INFO: Informed scheduler that task   ExtractAPIMangaData__99914b932b   has status   DONE
+DEBUG: Checking if ValidateData() is complete
+INFO: Informed scheduler that task   ValidateData__99914b932b   has status   DONE
+DEBUG: Checking if TransformHotelData() is complete
+INFO: Informed scheduler that task   TransformHotelData__99914b932b   has status   DONE
+DEBUG: Checking if TransformAnimeData() is complete
+INFO: Informed scheduler that task   TransformAnimeData__99914b932b   has status   DONE
+DEBUG: Checking if TransformMangaData() is complete
+INFO: Informed scheduler that task   TransformMangaData__99914b932b   has status   DONE
+INFO: Done scheduling tasks
+INFO: Running Worker with 1 processes
+DEBUG: Asking scheduler for work...
+DEBUG: Done
+DEBUG: There are no more tasks to run at this time
+INFO: Worker Worker(salt=9391967598, workers=1, host=shandytp, username=shandytp, pid=40687) was stopped. Shutting down Keep-Alive thread
+INFO: 
+===== Luigi Execution Summary =====
+
+Scheduled 7 tasks of which:
+* 7 complete ones were encountered:
+    - 1 ExtractAPIMangaData()
+    - 1 ExtractAnimeData(year=2024, season=winter)
+    - 1 ExtractHotelDatabase()
+    - 1 TransformAnimeData()
+    - 1 TransformHotelData()
+    ...
+
+Did not run any tasks
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+

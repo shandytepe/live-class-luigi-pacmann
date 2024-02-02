@@ -1,0 +1,5 @@
+__pycache__/
+.env
+helper/__pycache__/
+data/dummy/
+venv/
