@@ -7,7 +7,7 @@ from tqdm import tqdm
 import time
 
 class ExtractHotelDatabase(luigi.Task):
-    
+   
     def requires(self):
         pass
 
@@ -236,8 +236,6 @@ class TransformMangaData(luigi.Task):
         transform_manga_data["start_published"] = pd.to_datetime(transform_manga_data["start_published"])
         transform_manga_data["end_published"] = pd.to_datetime(transform_manga_data["end_published"])
 
-        COLS_TO_CONVERT = ["authors", "genres", "themes"]
-
         transform_manga_data["rank"] = transform_manga_data["rank"].astype(int)
 
         transform_manga_data.to_csv(self.output().path, index = False)
@@ -275,14 +273,17 @@ class LoadData(luigi.Task):
         # insert to database
         load_hotel_data.to_sql(name = hotel_data_name,
                                con = engine,
+                               if_exists = "append",
                                index = False)
         
         load_anime_data.to_sql(name = anime_data_name,
                                con = engine,
+                               if_exists = "append",
                                index = False)
         
         load_manga_data.to_sql(name = manga_data_name,
                                con = engine,
+                               if_exists = "append",
                                index = False)
         
         # save the process
