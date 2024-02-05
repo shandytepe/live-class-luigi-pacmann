@@ -5,6 +5,18 @@ from tqdm import tqdm
 import time
 
 def init_scrapper_engine(year: int, season: str):
+    """
+    Function yang digunakan inisialisasi web scrapper engine MyAnimeList
+
+    Parameters
+    ----------
+    year (int): tahun yang ingin discrape
+    season (str): season yang ingin discrape
+
+    Returns
+    -------
+    soup (object): BeautifulSoup engine untuk scrape website
+    """
     resp = requests.get(f"https://myanimelist.net/anime/season/{year}/{season}")
 
     soup = BeautifulSoup(resp.text, "html.parser")
@@ -12,6 +24,19 @@ def init_scrapper_engine(year: int, season: str):
     return soup
 
 def scrape_myanimelist(soup, html_tag, show_type):
+    """
+    Function yang digunakan untuk melakukan proses scrape website MyAnimeList
+
+    Parameters
+    ----------
+    soup (object): BeautifulSoup engine
+    html_tag (str): html tag dari masing - masing show type
+    show_type (str): show type yang ingin discrape
+
+    Returns
+    -------
+    converted_data (DataFrame): hasil data yang sudah berhasil discrape
+    """
     
     raw_data = soup.find_all("div", class_ = html_tag)
 
@@ -98,6 +123,18 @@ def scrape_myanimelist(soup, html_tag, show_type):
     return converted_data
 
 def concat_anime_data(anime_data):
+    """
+    Function yang digunakan untuk menggabungkan data dari
+    berbagai macam show type menjadi satu
+
+    Parameters
+    ----------
+    anime_data (DataFrame): kumpulan data yang ingin digabungkan
+    
+    Returns
+    -------
+    concat_data (DataFrame): data yang sudah berhasil di concat
+    """
     concat_data = pd.concat(anime_data)
 
     return concat_data
